@@ -36,3 +36,10 @@ Add the following lines
   
 go to bin, start tomcat
 #./startup.sh
+
+while deploying if you get error as permission denaied then do this,
+#chown -R ec2-user:ec2-user /opt
+
+then shutdown tomcat and once again start tomcat, then it will work
+#./shutdown.sh
+#./startup.sh
