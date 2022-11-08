@@ -9,3 +9,4 @@ eksctl version
 create IAM role with all permissions and attach to the Kubernetes ec-2 instance
 eksctl create cluster --name mallesh  --region ap-south-1 --node-type t2.medium
 kubectl get nodes
+eksctl delete cluster mallesh --region ap-south-1
