@@ -1,0 +1,8 @@
+take previous ec2 linux user
+sudo yum update -y
+sudo yum install ansible -y
+sudo amazon-linux-extras install ansible2 -y
+ansible --version
+sudo vim /etc/ansible/hosts
+ssh-keygen
+cat /home/ec2-user/.ssh/id_rsa.pub
