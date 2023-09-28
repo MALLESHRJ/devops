@@ -1,3 +1,6 @@
+https://www.digitalocean.com/community/tutorials/how-to-install-apache-tomcat-10-on-ubuntu-20-04 --------> use this url for tomcat installation
+
+
 Go in your in your EC2 instance and remember log as "sudo" 1st before you execute below command:
 Then go to browser and search tomcat apache, copy link address of core binary distribution
 
