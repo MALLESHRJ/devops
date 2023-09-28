@@ -1,3 +1,19 @@
+1  sudo apt-get update -y
+    2  sudo apt-get install default-jdk -y
+    3  sudo apt-get install docker.io -y
+    4  sudo docker -v
+    5  sudo docker login
+    6  sudo docker pull sonarqube
+    7  sudo docker run -itd -name sonarqube -p 9000:9000 -p 9092:9092 sonarqube
+    8  sudo docker run -itd --name sonarqube -p 9000:9000 -p 9092:9092 sonarqube
+    9  docker ps
+   10  sudo docker ps
+   11. host the application to 9000 port
+   12. username admin $ password admin
+
+
+
+
 Here I am installing SonarQube 8.3 OpenJDK 11 PostgreSQL 12. { Note: ec2 instance must be t2.small only }
 First of all, we need to perform some OS-level modifications to “Kernel Parameters” and “System limits.”
 1  sudo apt-get update -y
