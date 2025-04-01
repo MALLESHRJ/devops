@@ -4,17 +4,16 @@ Ensure that your software packages are up to date on your instance by uing the f
 [ec2-user ~]$ sudo yum update –y
 
 Add the Jenkins repo using the following command:
-[ec2-user ~]$ sudo wget -O /etc/yum.repos.d/jenkins.repo \ https://pkg.jenkins.io/redhat-stable/jenkins.repo
+[ec2-user ~]$ sudo wget -O /etc/yum.repos.d/jenkins.repo \
+    https://pkg.jenkins.io/redhat-stable/jenkins.repo
 
 Import a key file from Jenkins-CI to enable installation from the package:
-[ec2-user ~]$ sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key
-
+[ec2-user ~]$ sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io-2023.key
 upgrade
 [ec2-user ~]$ sudo yum upgrade
 
 Install Java:
-[ec2-user ~]$ sudo amazon-linux-extras install java-openjdk11 -y
-
+[ec2-user ~]$ sudo yum install java-17-amazon-corretto -y
 Install Jenkins:
 [ec2-user ~]$ sudo yum install jenkins -y
 
@@ -31,5 +30,5 @@ Configuring Jenkins
 Connect to http://<your_server_public_DNS>:8080 from your browser. You will be able to access Jenkins through its management interface:
 Then for unlock jenkins
 get adminstrative password, Use the following command to display this password:
-[ec2-user ~]$ cat /var/lib/jenkins/secrets/initialAdminPassword
+[ec2-user ~]$ sudo cat /var/lib/jenkins/secrets/initialAdminPassword
 
